@@ -341,7 +341,7 @@ class AdaFMLTrainer:
 
     def train(self):
 
-        progress_bar = tqdm(range(self.config.num_rounds), desc="AdaFML Training (TruncExp Time)")
+        progress_bar = tqdm(range(self.config.num_rounds), desc="AdaFML Training")
         for round_idx in progress_bar:
             current_global_model_state = copy.deepcopy(self.global_model.state_dict())
 
