@@ -32,8 +32,6 @@ def run_experiment(method='adafml', config_override=None):
     return {
         'losses': trainer.loss_records,
         'accuracy': trainer.accuracy_history,
-        'final_alphas': torch.sigmoid(trainer.alpha).detach().cpu().numpy() if hasattr(trainer, 'alpha') else None,
-        'final_betas': torch.softmax(trainer.beta, dim=0).detach().cpu().numpy() if hasattr(trainer, 'beta') else None,
         'log_dir': current_config.log_dir
     }
 
