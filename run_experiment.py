@@ -33,7 +33,7 @@ def run_experiment(method='adafml', config_override=None):
         'losses': trainer.loss_records,
         'accuracy': trainer.accuracy_history,
         'log_dir': current_config.log_dir
-    }
+    } ##this part can be adjusted.
 
 
 if __name__ == "__main__":
