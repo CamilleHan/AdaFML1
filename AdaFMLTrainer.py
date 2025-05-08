@@ -50,7 +50,6 @@ class AdaFMLTrainer:
 
         self.model_params_count = sum(p.numel() for p in self.global_model.parameters())
         self.time_normalizer = self._calibrate_time_normalizer()
-        print(f"Calibrated time normalizer (based on expected time): {self.time_normalizer:.4f}")
 
     def _calibrate_time_normalizer(self):
         expected_time_samples = []
@@ -76,7 +75,6 @@ class AdaFMLTrainer:
         return np.float32(final_normalizer)
 
     def _local_train(self, client_idx: int, global_model_state: Dict) -> Tuple[Dict, float, float, float]:
-
         client = self.clients[client_idx]
         model = AdaFMLModel(self.config.dataset).to(device)
         model.load_state_dict(global_model_state)
