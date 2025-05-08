@@ -1,6 +1,6 @@
 # AdaFML
 
-This repository contains the PyTorch implementation for the paper: **AdaFML: Adaptive Federated Meta Learning With Multi-Objectives and Context-Awareness in Dynamic Heterogeneous Networks**.
+This repository contains the main PyTorch implementation for the paper: **AdaFML: Adaptive Federated Meta Learning With Multi-Objectives and Context-Awareness in Dynamic Heterogeneous Networks**.
 
 ## Citation
 
